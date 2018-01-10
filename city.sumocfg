@@ -1,0 +1,12 @@
+<configuration>
+    <input>
+        <net-file value="3junctions.net.xml"/>
+        <route-files value="3junctions.rou.xml"/>
+        <gui-settings-file value="3junctions.settings.xml"/>
+        <additional-files value="3junctions.det.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="30000"/>
+    </time>
+</configuration>
