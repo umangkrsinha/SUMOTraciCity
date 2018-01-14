@@ -1,9 +1,9 @@
 <configuration>
     <input>
-        <net-file value="3junctions.net.xml"/>
-        <route-files value="3junctions.rou.xml"/>
-        <gui-settings-file value="3junctions.settings.xml"/>
-        <additional-files value="3junctions.det.xml"/>
+        <net-file value="city.net.xml"/>
+        <route-files value="city.rou.xml"/>
+        <gui-settings-file value="city.settings.xml"/>
+        <additional-files value="city.det.xml"/>
     </input>
     <time>
         <begin value="0"/>
