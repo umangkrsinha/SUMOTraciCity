@@ -41,9 +41,9 @@ junction_U = Junction(_id = 'U',
 junction_L = Junction(_id = 'L', 
 	dev_a_dets = ['18', '19', '20', '21', '22', '23'], 
 	dev_b_dets = ['12', '13', '14', '15', '16', '17'], 
-	dev_c_dets = ['66', '67', '68', '69', '70', '71'], 
+	dev_c_dets = ['24', '25', '26', '27', '28', '29'], 
 	dev_d_dets = ['66', '67', '68', '69', '70', '71'],
-	neighbours = [{'junction': junction_R,'connection': ('c', 'a'), 'data':0}, {'junction': junction_U, 'connection': ('b', 'd'), 'data':0}]) 
+	neighbours = [{'junction': junction_R,'connection': ('c', 'a'), 'data':0}, {'junction': junction_U, 'connection': ('b', 'd'), 'data':0}])
 
 junction_R = Junction(_id = 'R', 
 	dev_a_dets = ['12', '13', '14', '15', '16', '17'], 
