@@ -206,8 +206,19 @@ def updateJunction(junction):
 
 
 	#print(Qar,Qbr,Qcr,Qdr,Qij)
+	Qan, Qbn, Qcn, Qdn == 0, 0, 0, 0
+	for neighbour in junction.neighbours:
+		connection = neighbour.connection[0]
+		data = neighbour.data
+		if connection == 'a':
+			Qan = data
+		elif connection == 'b':
+			Qbn = data
+		elif connection == 'c':
+			Qcn = data
+		elif connection == 'd':
+			Qdn == data
 	#calling algo:
-	junction.green = algo(Qlen[0], Qlen[1], Qlen[2], Qlen[3], Qar, Qbr, Qcr, Qdr)
+	junction.green = algo(Qlen[0], Qlen[1], Qlen[2], Qlen[3], Qar, Qbr, Qcr, Qdr, Qan, Qbn, Qcn, Qdn)
 
 	return junction
-
