@@ -33,15 +33,15 @@ def algo(Qa,Qb,Qc,Qd,Qar,Qbr,Qcr,Qdr,Qan,Qbn,Qcn,Qdn):
 #	return b+1
 	W=numpy.zeros(4,4)
 	R=numpy.zeros(4,4)
-	R(0)=[1,2,3,2]
-	R(1)=[2,1,2,3]
-	R(2)=[3,2,1,2]
-	R(3)=[2,3,2,1]
+	R[0]=[1,2,3,2]
+	R[1]=[2,1,2,3]
+	R[2]=[3,2,1,2]
+	R[3]=[2,3,2,1]
 
-	W(0)=[Qa-Qar[0]*Qan,Qa-Qar[1]*Qbn,Qa-Qar[2]*Qcn,Qa-Qar[3]*Qdn]
-	W(1)=[Qb-Qbr[0]*Qan,Qb-Qbr[1]*Qbn,Qb-Qbr[2]*Qcn,Qb-Qbr[3]*Qdn]
-	W(2)=[Qc-Qcr[0]*Qan,Qc-Qcr[1]*Qbn,Qc-Qcr[2]*Qcn,Qc-Qcr[3]*Qdn]
-	W(3)=[Qd-Qdr[0]*Qan,Qd-Qdr[1]*Qbn,Qd-Qdr[2]*Qcn,Qd-Qdr[3]*Qdn]
+	W[0]=[Qa-Qar[0]*Qan,Qa-Qar[1]*Qbn,Qa-Qar[2]*Qcn,Qa-Qar[3]*Qdn]
+	W[1]=[Qb-Qbr[0]*Qan,Qb-Qbr[1]*Qbn,Qb-Qbr[2]*Qcn,Qb-Qbr[3]*Qdn]
+	W[2]=[Qc-Qcr[0]*Qan,Qc-Qcr[1]*Qbn,Qc-Qcr[2]*Qcn,Qc-Qcr[3]*Qdn]
+	W[3]=[Qd-Qdr[0]*Qan,Qd-Qdr[1]*Qbn,Qd-Qdr[2]*Qcn,Qd-Qdr[3]*Qdn]
 	a=0
 	b=0
 	for i in range (4):
