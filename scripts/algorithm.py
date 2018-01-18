@@ -2,35 +2,54 @@
 import numpy
 
 #====================================algorithm used====================================
-def algo(Qa,Qb,Qc,Qd,Qar,Qbr,Qcr,Qdr):
+def algo(Qa,Qb,Qc,Qd,Qar,Qbr,Qcr,Qdr,Qan,Qbn,Qcn,Qdn):
 	
-	def Pressure(Qa):  #assumed linear
-		return (2*Qa+1)
-	U=numpy.zeros((4,4,4))
-	U[0][0]=[1,17,18,19]
-	U[1][1]=[16,1,14,18]
-	U[2][2]=[13,11,1,14]
-	U[3][3]=[9,7,8,1]
-
-	Pressure_Array=Pressure(numpy.array([Qa,Qb,Qc,Qd]))  
-
-	W=numpy.zeros((4,4))
-	#Preparing Weights
-	W[0]=numpy.maximum(((Qa*numpy.array(Qar))/U[0][0]*[0,Pressure(Qa)-Pressure(Qb),Pressure(Qa)-Pressure(Qc),Pressure(Qa)-Pressure(Qd)]),[0,0,0,0])
-	W[1]=numpy.maximum(((Qb*numpy.array(Qbr))/U[1][1]*[Pressure(Qb)-Pressure(Qa),0,Pressure(Qb)-Pressure(Qc),Pressure(Qb)-Pressure(Qd)]),[0,0,0,0])
-	W[2]=numpy.maximum(((Qc*numpy.array(Qcr))/U[2][2]*[Pressure(Qc)-Pressure(Qa),Pressure(Qc)-Pressure(Qb),0,Pressure(Qc)-Pressure(Qd)]),[0,0,0,0])
-	W[3]=numpy.maximum(((Qd*numpy.array(Qdr))/U[3][3]*[Pressure(Qd)-Pressure(Qa),Pressure(Qd)-Pressure(Qb),Pressure(Qd)-Pressure(Qc),0]),[0,0,0,0])
+#	def Pressure(Qa):  #assumed linear
+#		return (2*Qa+1)
+#	U=numpy.zeros((4,4,4))
+#	U[0][0]=[1,17,18,19]
+#	U[1][1]=[16,1,14,18]
+#	U[2][2]=[13,11,1,14]
+#	U[3][3]=[9,7,8,1]
+#
+#	Pressure_Array=Pressure(numpy.array([Qa,Qb,Qc,Qd]))  
+#
+#	W=numpy.zeros((4,4))
+#	#Preparing Weights
+#	W[0]=numpy.maximum(((Qa*numpy.array(Qar))/U[0][0]*[0,Pressure(Qa)-Pressure(Qb),Pressure(Qa)-Pressure(Qc),Pressure(Qa)-Pressure(Qd)]),[0,0,0,0])
+#	W[1]=numpy.maximum(((Qb*numpy.array(Qbr))/U[1][1]*[Pressure(Qb)-Pressure(Qa),0,Pressure(Qb)-Pressure(Qc),Pressure(Qb)-Pressure(Qd)]),[0,0,0,0])
+#	W[2]=numpy.maximum(((Qc*numpy.array(Qcr))/U[2][2]*[Pressure(Qc)-Pressure(Qa),Pressure(Qc)-Pressure(Qb),0,Pressure(Qc)-Pressure(Qd)]),[0,0,0,0])
+#	W[3]=numpy.maximum(((Qd*numpy.array(Qdr))/U[3][3]*[Pressure(Qd)-Pressure(Qa),Pressure(Qd)-Pressure(Qb),Pressure(Qd)-Pressure(Qc),0]),[0,0,0,0])
     
-	for i in range(4):
-		W[i][i]=0
-		b=0
-		a=0
+#	for i in range(4):
+#		W[i][i]=0
+#		b=0
+#		a=0
+#	for i in range (4):
+#		if(numpy.sum(W*U[i])>a):
+#			a=(numpy.sum(W*U[i]))
+#			b=i
+#       print(b+1)   
+#	return b+1
+	W=numpy.zeros(4,4)
+	R=numpy.zeros(4,4)
+	R(0)=[1,2,3,2]
+	R(1)=[2,1,2,3]
+	R(2)=[3,2,1,2]
+	R(3)=[2,3,2,1]
+
+	W(0)=[Qa-Qar[0]*Qan,Qa-Qar[1]*Qbn,Qa-Qar[2]*Qcn,Qa-Qar[3]*Qdn]
+	W(1)=[Qb-Qbr[0]*Qan,Qb-Qbr[1]*Qbn,Qb-Qbr[2]*Qcn,Qb-Qbr[3]*Qdn]
+	W(2)=[Qc-Qcr[0]*Qan,Qc-Qcr[1]*Qbn,Qc-Qcr[2]*Qcn,Qc-Qcr[3]*Qdn]
+	W(3)=[Qd-Qdr[0]*Qan,Qd-Qdr[1]*Qbn,Qd-Qdr[2]*Qcn,Qd-Qdr[3]*Qdn]
+	a=0
+	b=0
 	for i in range (4):
-		if(numpy.sum(W*U[i])>a):
-			a=(numpy.sum(W*U[i]))
+		if(numpy.sum(W[i]*R[i])>a):
+			a=(numpy.sum(W[i]*R[i]))
 			b=i
-        #print(b+1)   
 	return b+1
+
 #==============================preparation to call algorithm===========================
 def updateJunction(junction):
 	

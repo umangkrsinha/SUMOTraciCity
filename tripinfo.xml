@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Thursday 11 January 2018 12:43:45 AM IST by SUMO gui Version 0.32.0
+<!-- generated on Monday 15 January 2018 04:44:46 AM IST by SUMO gui Version 0.30.0
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="../3junctions.net.xml"/>
-        <route-files value="../3junctions.rou.xml"/>
-        <additional-files value="../3junctions.det.xml"/>
+        <net-file value="../city.net.xml"/>
+        <route-files value="../city.rou.xml"/>
+        <additional-files value="../city.det.xml"/>
     </input>
 
     <output>
@@ -21,19 +21,19 @@
     </time>
 
     <traci_server>
-        <remote-port value="46371"/>
+        <remote-port value="47497"/>
     </traci_server>
 
     <gui_only>
-        <gui-settings-file value="../3junctions.settings.xml"/>
+        <gui-settings-file value="../city.settings.xml"/>
     </gui_only>
 
 </configuration>
 -->
 
 <tripinfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tripinfo_file.xsd">
-    <tripinfo id="10" depart="10.00" departLane="UtoR_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="64.00" arrivalLane="UtoR_0" arrivalPos="670.48" arrivalSpeed="12.90" duration="54.00" routeLength="665.38" waitSteps="0" timeLoss="5.41" rerouteNo="0" devices="tripinfo_10" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
-    <tripinfo id="39" depart="39.00" departLane="LtoU_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="93.00" arrivalLane="LtoU_1" arrivalPos="670.48" arrivalSpeed="13.82" duration="54.00" routeLength="665.38" waitSteps="0" timeLoss="5.67" rerouteNo="0" devices="tripinfo_39" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
-    <tripinfo id="5" depart="5.00" departLane="LtoU_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="97.00" arrivalLane="UtoNorthEast_0" arrivalPos="488.57" arrivalSpeed="13.88" duration="92.00" routeLength="1176.65" waitSteps="0" timeLoss="6.67" rerouteNo="0" devices="tripinfo_5" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
-    <tripinfo id="25" depart="25.00" departLane="EasttoR_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="103.00" arrivalLane="RtoSouthEast_0" arrivalPos="474.64" arrivalSpeed="13.16" duration="78.00" routeLength="990.37" waitSteps="0" timeLoss="6.68" rerouteNo="0" devices="tripinfo_25" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
+    <tripinfo id="10" depart="10.00" departLane="UtoR_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="64.00" arrivalLane="UtoR_0" arrivalPos="670.48" arrivalSpeed="12.90" duration="54.00" routeLength="665.38" waitSteps="0" timeLoss="5.38" rerouteNo="0" devices="tripinfo_10" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
+    <tripinfo id="39" depart="39.00" departLane="LtoU_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="93.00" arrivalLane="LtoU_1" arrivalPos="670.48" arrivalSpeed="13.82" duration="54.00" routeLength="665.38" waitSteps="0" timeLoss="5.64" rerouteNo="0" devices="tripinfo_39" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
+    <tripinfo id="5" depart="5.00" departLane="LtoU_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="97.00" arrivalLane="UtoNorthEast_0" arrivalPos="488.57" arrivalSpeed="13.88" duration="92.00" routeLength="1176.65" waitSteps="0" timeLoss="6.62" rerouteNo="0" devices="tripinfo_5" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
+    <tripinfo id="25" depart="25.00" departLane="EasttoR_0" departPos="5.10" departSpeed="0.00" departDelay="0.00" arrival="103.00" arrivalLane="RtoSouthEast_0" arrivalPos="474.64" arrivalSpeed="13.16" duration="78.00" routeLength="964.65" waitSteps="0" timeLoss="6.64" rerouteNo="0" devices="tripinfo_25" vType="DEFAULT_VEHTYPE" speedFactor="1.00" vaporized=""/>
 </tripinfos>
