@@ -16,7 +16,7 @@ from algorithm import updateJunction
 #=================================now defining junction================================
 class Junction(object):
 
-	def __init__(self, _id, dev_a_dets, dev_b_dets, dev_c_dets, dev_d_dets, neighbours):
+	def __init__(self, _id, dev_a_dets, dev_b_dets, dev_c_dets, dev_d_dets):
 		
 		self._id = _id
 		self.dev_a = self.createDevice(dev_a_dets)
@@ -43,7 +43,7 @@ class Junction(object):
 		self.Qdb = 10
 		self.Qdc = 10
 		self.visitNum = 0
-		self.neighbours = neighbours
+		self.neighbours = []
 	def createDevice(self, dets):
 		return Device(dets)
 
@@ -63,10 +63,12 @@ class Junction(object):
 		return vehicleVectarr
 	
 	def updateNeighbourInfo(self):
+		i = 0
 		for neighbour in self.neighbours:
-			(fromNode, toNode) = neighbour.connection
+			(fromNode, toNode) = neighbour['connection']
 			toNode = 'Q'+toNode+'Num'
-			self.neighbours.data = self.getattr(neighbour.junction, toNode)
+			self.neighbours[i]['data'] = getattr(neighbour['junction'], toNode)
+			i += 1
 		return
 	
 	def update(self):

@@ -35,23 +35,23 @@ junction_U = Junction(_id = 'U',
 	dev_a_dets = ['0', '1', '2', '3', '4', '5'], 
 	dev_b_dets = ['6', '7', '8', '9', '10', '11'], 
 	dev_c_dets = ['60', '61', '62', '63', '64', '65'], 
-	dev_d_dets = ['54', '55', '56', '57', '58', '59'],
-	neighbours = [{'junction': junction_L,'connection': ('d', 'b'), 'data':0}, {'junction': junction_R, 'connection': ('c', 'b'), 'data':0}])
+	dev_d_dets = ['54', '55', '56', '57', '58', '59'])
 
 junction_L = Junction(_id = 'L', 
 	dev_a_dets = ['18', '19', '20', '21', '22', '23'], 
 	dev_b_dets = ['12', '13', '14', '15', '16', '17'], 
 	dev_c_dets = ['24', '25', '26', '27', '28', '29'], 
-	dev_d_dets = ['66', '67', '68', '69', '70', '71'],
-	neighbours = [{'junction': junction_R,'connection': ('c', 'a'), 'data':0}, {'junction': junction_U, 'connection': ('b', 'd'), 'data':0}])
+	dev_d_dets = ['66', '67', '68', '69', '70', '71'])
 
 junction_R = Junction(_id = 'R', 
 	dev_a_dets = ['12', '13', '14', '15', '16', '17'], 
 	dev_b_dets = ['48', '49', '50', '51', '52', '53'], 
 	dev_c_dets = ['30', '31', '32', '33', '34', '35'], 
-	dev_d_dets = ['42', '43', '44', '45', '46', '47'],
-	neighbours = [{'junction': junction_L,'connection': ('a', 'c'), 'data':0}, {'junction': junction_U, 'connection': ('b', 'c'), 'data':0}]) 
-
+	dev_d_dets = ['42', '43', '44', '45', '46', '47']) 
+#set neighbours
+junction_U.neighbours = [{'junction': junction_L,'connection': ('d', 'b'), 'data':0}, {'junction': junction_R, 'connection': ('c', 'b'), 'data':0}]
+junction_L.neighbours = [{'junction': junction_R,'connection': ('c', 'a'), 'data':0}, {'junction': junction_U, 'connection': ('b', 'd'), 'data':0}]
+junction_R.neighbours = [{'junction': junction_L,'connection': ('a', 'c'), 'data':0}, {'junction': junction_U, 'connection': ('b', 'c'), 'data':0}]
 #========================================run()=========================================
 steps = 0
 def run():

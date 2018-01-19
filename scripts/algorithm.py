@@ -31,8 +31,8 @@ def algo(Qa,Qb,Qc,Qd,Qar,Qbr,Qcr,Qdr,Qan,Qbn,Qcn,Qdn):
 #			b=i
 #       print(b+1)   
 #	return b+1
-	W=numpy.zeros(4,4)
-	R=numpy.zeros(4,4)
+	W=numpy.zeros((4,4))
+	R=numpy.zeros((4,4))
 	R[0]=[1,2,3,2]
 	R[1]=[2,1,2,3]
 	R[2]=[3,2,1,2]
@@ -206,10 +206,10 @@ def updateJunction(junction):
 
 
 	#print(Qar,Qbr,Qcr,Qdr,Qij)
-	Qan, Qbn, Qcn, Qdn == 0, 0, 0, 0
+	Qan, Qbn, Qcn, Qdn = 0, 0, 0, 0
 	for neighbour in junction.neighbours:
-		connection = neighbour.connection[0]
-		data = neighbour.data
+		connection = neighbour['connection'][0]
+		data = neighbour['data']
 		if connection == 'a':
 			Qan = data
 		elif connection == 'b':
