@@ -12,13 +12,13 @@ def setJunctionPhase(junction, setAllRed):
 	if setAllRed == True:
 		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrrrrrrrrrrrrrrrrrrrrrr")
 	elif junction.green == 1:
-		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrrrrrrrrrrrrrrrGGGGGGg")
+		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrrrrrrrrrrrrrrrggggggg")
 	elif junction.green == 2:
-		traci.trafficlights.setRedYellowGreenState(junction._id, "GGGGGGgrrrrrrrrrrrrrrrrrrrrr")
+		traci.trafficlights.setRedYellowGreenState(junction._id, "gggggggrrrrrrrrrrrrrrrrrrrrr")
 	elif junction.green == 3:
-		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrrrrrrrrrGGGGGGgrrrrrr")
+		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrrrrrrrrgggggggrrrrrrr")
 	elif junction.green == 4:
-		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrGGGGGGgrrrrrrrrrrrrrr")
+		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrgggggggrrrrrrrrrrrrrr")
 	else:
 		traci.trafficlights.setRedYellowGreenState(junction._id, "rrrrrrrrrrrrrrrrrrrrrrrrrrrr")
 	return

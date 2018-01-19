@@ -57,7 +57,7 @@ steps = 0
 def run():
 
 	global steps
-	endSimTIme = 100
+	endSimTIme = 1000
 	while steps < endSimTIme:
 		
 		traci.simulationStep()
