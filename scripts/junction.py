@@ -16,7 +16,7 @@ from algorithm import updateJunction
 #=================================now defining junction================================
 class Junction(object):
 
-	def __init__(self, _id, dev_a_dets, dev_b_dets, dev_c_dets, dev_d_dets):
+	def __init__(self, _id, dev_a_dets, dev_b_dets, dev_c_dets, dev_d_dets, phaseMap):
 		
 		self._id = _id
 		self.dev_a = self.createDevice(dev_a_dets)
@@ -44,6 +44,7 @@ class Junction(object):
 		self.Qdc = 10
 		self.visitNum = 0
 		self.neighbours = []
+		self.phaseMap = phaseMap
 	def createDevice(self, dets):
 		return Device(dets)
 
